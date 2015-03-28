@@ -35,4 +35,13 @@
 		<servlet-name>Color Code</servlet-name>
 		<url-pattern>/colors.code</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Jar Download</servlet-name>
+		<servlet-class>hcmus14hc.cnpm.airplaneticket.controller.DownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Jar Download</servlet-name>
+		<url-pattern>/download.jar</url-pattern>
+	</servlet-mapping>
 </web-app>

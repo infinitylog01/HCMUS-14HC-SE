@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 public class FirstServlet extends HttpServlet{
 
 	/**
-	 * 
+	 * mini MVC chapter 3
 	 */
 	private static final long serialVersionUID = 5060756860694342895L;
 	

@@ -1,0 +1,6 @@
+*.lock
+*.zip
+02. Source Code/.metadata/
+02. Source Code/AirplaneTicket/.settings/
+02. Source Code/AirplaneTicket/build/
+02. Source Code/Servers/
