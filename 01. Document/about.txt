@@ -1,0 +1,3 @@
+﻿Thư mục bao gồm những tài liệu đồ án bao gồm:
+Báo cáo (yêu cầu, mô hình UML, luồng xử lý)
+Các tài liệu csdl
