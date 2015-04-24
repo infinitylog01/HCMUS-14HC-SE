@@ -9,10 +9,16 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 public class DBConnectionPool {
-	private DataSource dataSource;
-	private Connection mysql_connection;
+	private static DBConnectionPool mInstance;
+	private static DataSource dataSource;
 	
-	public DBConnectionPool() {
+	static void init() {
+		if(mInstance == null) {
+			mInstance = new DBConnectionPool();
+		}
+	}
+	
+	private DBConnectionPool() {
 		try {
 			Context ctx = new InitialContext();
 			dataSource = (DataSource) ctx.lookup("java:comp/env/jdbc/mydb");
@@ -21,20 +27,23 @@ public class DBConnectionPool {
 		}
 	}
 	
-	public Connection openConnection() {
+	public static Connection openConnection() {
+		Connection mysql_connection = null;
 		try {
-			if(mysql_connection == null || mysql_connection.isClosed())
-				mysql_connection = dataSource.getConnection();
+			mysql_connection = dataSource.getConnection();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
 		return mysql_connection;
 	}
 	
-	public void closeConnection() {
+	public static void closeConnection(Connection mysql_connection) {
 		try {
 			if(mysql_connection != null && !mysql_connection.isClosed())
 				mysql_connection.close();
+			else
+				System.out.println("db connection null");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

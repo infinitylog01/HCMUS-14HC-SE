@@ -19,7 +19,7 @@ CREATE TABLE Configuration (
     maximum_stop_time SMALLINT UNSIGNED NOT NULL
 );
 
-CREATE TABLE Passenger(
+CREATE TABLE Staff(
 	/* Identication Number | so CMND */
 	id char(10) PRIMARY KEY,
     fullname varchar(50) NOT NULL,
@@ -71,3 +71,8 @@ CREATE TABLE TicketClass(
 
 INSERT INTO configuration
 VALUES (1800, 2 , 600, 1200);
+
+INSERT INTO configuration
+VALUES (1800, 3 , 600, 1200);
+
+Select * from configuration;

@@ -29,7 +29,7 @@
 
   <Resource name="jdbc/mydb" auth="Container" type="javax.sql.DataSource"
                maxActive="100" maxIdle="30" maxWait="10000"
-               username="webdev" password="1234567" driverClassName="com.mysql.jdbc.Driver"
+               username="webdev" password="rqjnQxu38Hqp84V8" driverClassName="com.mysql.jdbc.Driver"
                url="jdbc:mysql://localhost:3306/airplaneticket_db"/>
 
 </Context>

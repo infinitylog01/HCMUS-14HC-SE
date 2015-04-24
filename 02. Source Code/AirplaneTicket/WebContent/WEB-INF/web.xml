@@ -55,4 +55,13 @@
 		<servlet-name>wfLogin</servlet-name>
 		<url-pattern>/login.do</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>wfTestLib</servlet-name>
+		<servlet-class>hcmus14hc.cnpm.airplaneticket.controller.TestLibsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>wfTestLib</servlet-name>
+		<url-pattern>/testlib.do</url-pattern>
+	</servlet-mapping>
 </web-app>
